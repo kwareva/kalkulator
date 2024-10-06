@@ -36,14 +36,12 @@ function showHistory() {
     const historyDiv = document.getElementById('history');
     const historyList = document.getElementById('historyList');
 
-    historyList.innerHTML = ''; // Clear previous history
-
+    historyList.innerHTML = ''; 
     history.forEach(item => {
         const listItem = document.createElement('li');
         listItem.textContent = item;
         historyList.appendChild(listItem);
     });
 
-    // Toggle the history section visibility
     historyDiv.style.display = (historyDiv.style.display === 'none') ? 'block' : 'none';
 }
