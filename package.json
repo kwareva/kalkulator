@@ -1,12 +1,13 @@
 {
   "name": "kalkulator",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "", // Opsional: Descripsi singkat tentang proyek
+  "main": "./api/app.js", // Pastikan path correct
   "scripts": {
-      "start":"node api/index.js"
-},
-"dependencies":{
-       “express”: "^4.x.y”,
-       “cors”: "^x.x.x”
+      "start": "node ./api/app.js" // Pastikan path correct
+  },
+  "dependencies": {
+      "express": "^4.17.x", // Pastikan version stabil
+      "cors": "^2.8.x" // Pastikan version stabil
+  }
 }
-
