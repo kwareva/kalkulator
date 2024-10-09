@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 // Endpoint untuk melakukan perhitungan
-app.post('/calculate', (req, res) => {
+app.post('/api/calculate', (req, res) => {
     const { expression } = req.body;
 
     try {
