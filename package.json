@@ -1,13 +1,12 @@
 {
   "name": "kalkulator",
   "version": "1.0.0",
-  "description": "", 
-  "main": "./api/app.js", 
+  "main": "api/app.js",
   "scripts": {
-      "start": "node ./api/app.js" 
+    "start": "node api/app.js"
   },
   "dependencies": {
-      "express": "^4.17.x", 
-      "cors": "^2.8.x" 
+    "express": "^4.17.1",
+    "cors": "^2.8.5"
   }
 }
