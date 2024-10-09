@@ -16,7 +16,7 @@ function deleteLast() {
 function calculateResult() {
     const expression = document.getElementById("expression").value;
 
-    fetch('/api/calculate', {  // Pastikan path mengarah ke endpoint API
+    fetch('/api/calculate', {  
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ expression }),
@@ -40,7 +40,7 @@ function showHistory() {
     const historyDiv = document.getElementById('history');
     const historyList = document.getElementById('historyList');
 
-    historyList.innerHTML = ''; // Clear previous history
+    historyList.innerHTML = ''; 
 
     history.forEach(item => {
         const listItem = document.createElement('li');
@@ -48,6 +48,6 @@ function showHistory() {
         historyList.appendChild(listItem);
     });
 
-    // Toggle the history section visibility
+   
     historyDiv.style.display = (historyDiv.style.display === 'none') ? 'block' : 'none';
 }
