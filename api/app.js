@@ -9,8 +9,8 @@ app.post('/api/calculate', (req, res) => {
     const { expression } = req.body;
 
     try {
-        const result = eval(expression); // Evaluasi ekspresi matematika
-        res.json({ result }); // Kirim balik hasil evaluasi dalam bentuk JSON
+        const result = eval(expression); 
+        res.json({ result }); 
     } catch (error) {
         res.status(400).json({ error: 'Ekspresi invalid' }); 
     }
