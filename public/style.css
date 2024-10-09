@@ -50,21 +50,13 @@ button:hover {
 
 #equals-button {
     background-color: green;
-    /* Change background to green */
     color: white;
-    /* Change text color to white for contrast */
     border: none;
-    /* Remove border */
     border-radius: 5px;
-    /* Rounded corners */
     padding: 15px;
-    /* Add some padding */
     font-size: 20px;
-    /* Adjust font size */
     cursor: pointer;
-    /* Change cursor to pointer */
     transition: background-color 0.3s;
-    /* Smooth transition */
 }
 
 #equals-button:hover {
@@ -101,6 +93,5 @@ button:hover {
 
 button:nth-child(2) {
     background-color: #f00;
-    /* Red color for delete button */
     color: #fff;
 }
