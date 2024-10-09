@@ -14,22 +14,26 @@ function deleteLast() {
 
 
 function calculateResult() {
-    const expression = document.getElementById('display').value;
-    fetch('/calculate', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ expression }),
-        })
-        .then((response) => response.json())
-        .then((data) => {
-            if (data.error) {
-                document.getElementById('display').value = 'Error';
-            } else {
-                document.getElementById('display').value = data.result;
-            }
-        });
+    const expression = document.getElementById("expression").value;
+
+    fetch('/api/calculate', {  // Pastikan path mengarah ke endpoint API
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ expression }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        document.getElementById("result").innerText = "Hasil: " + data.result;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById("result").innerText = "Error: " + error.message;
+    });
 }
 
 function showHistory() {
